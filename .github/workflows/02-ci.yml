@@ -12,7 +12,7 @@ on:
   # Allow a safe manual run before students trigger it with a code change.
   workflow_dispatch:
 
-jobs:
+jobs:-
   run-tests:
     # The runner is the temporary machine that executes the steps below.
     runs-on: ubuntu-latest

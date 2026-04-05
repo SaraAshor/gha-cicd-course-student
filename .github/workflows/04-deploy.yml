@@ -20,8 +20,8 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     # Use a fresh runner for the deployment simulation.
     runs-on: ubuntu-latest
-
-    steps:
+ 
+    steps: 
       - name: Download build artifact
         # Download the exact artifact produced by the build run.
         uses: actions/download-artifact@v8
@@ -30,7 +30,7 @@ jobs:
           github-token: ${{ github.token }}
           repository: ${{ github.repository }}
           run-id: ${{ github.event.workflow_run.id }}
-          path: downloaded-artifact
+          path: downloaded-
 
       - name: Show downloaded files
         # Quick visibility step so students can see what arrived from the build.
